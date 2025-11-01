@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.xminj.password.manager.page.LoginPageController">
+
+    <VBox alignment="CENTER" spacing="18">
+        <!-- 图标 -->
+        <!--<ImageView fx:id="iconImage" fitHeight="80" fitWidth="80" pickOnBounds="true" preserveRatio="true">
+            <Image url="@/images/icon/locked.png"/>
+        </ImageView>-->
+        <ImageView fx:id="iconImage" fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true" />
+
+        <!-- 标题 -->
+        <Label fx:id="titleLabel" style="-fx-font-size: 22px; -fx-font-family: 'PingFang SC'; -fx-text-fill: black;" text="“密码” 已锁定" />
+
+        <!-- 提示文字 -->
+        <Label fx:id="tipLabel" style="-fx-font-size: 14px; -fx-font-family: 'PingFang SC'; -fx-text-fill: gray;" text="输入密码解锁。" />
+
+
+        <!-- 输入区块 -->
+        <VBox alignment="CENTER" spacing="10">  <!-- 控制输入框之间的间距 -->
+            <!-- 普通解锁 密码输入框 -->
+            <PasswordField fx:id="passwordField" alignment="CENTER" maxWidth="200.0" promptText="输入密码" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: lightgray; -fx-font-size: 14;" />
+
+            <!-- 第一次设置密码输入框 -->
+            <PasswordField fx:id="settingPasswordField" alignment="CENTER" maxWidth="200.0" promptText="设置新密码" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: lightgray; -fx-font-size: 14;" />
+
+            <PasswordField fx:id="confirmPasswordField" alignment="CENTER" maxWidth="200.0" promptText="确认密码" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: lightgray; -fx-font-size: 14;" />
+        </VBox>
+
+        <!-- 按钮区块 -->
+        <VBox alignment="CENTER" prefHeight="358.0" prefWidth="2045.0" spacing="10"> <!-- 输入框与按钮之间额外增加 20px 间距 -->
+            <padding>
+                <Insets top="20" />
+            </padding>
+            <Button fx:id="unlockButton" onAction="#onUnlockClicked" style="-fx-background-color: #007AFF; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 6; -fx-padding: 5 15 5 15;" text="解锁" />
+
+            <Button fx:id="settingPasswordButton" onAction="#onSetPasswordClicked" style="-fx-background-color: #34C759; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 6; -fx-padding: 5 15 5 15;" text="设置密码" visible="false" />
+        </VBox>
+
+    </VBox>
+</StackPane>

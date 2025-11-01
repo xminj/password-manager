@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.xminj.password.manager.page.MainPageController"
+            prefHeight="600.0" prefWidth="900.0">
+
+
+    <VBox alignment="CENTER" spacing="18">
+        <Label  style="-fx-font-size: 22px; -fx-font-family: 'PingFang SC'; -fx-text-fill: black;" text="“主页面" />
+    </VBox>
+
+</BorderPane>

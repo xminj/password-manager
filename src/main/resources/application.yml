@@ -1,0 +1,14 @@
+#datasources:
+#  default:
+#    url: 'jdbc:h2:file:./data/password_manager;CIPHER=AES;INIT=CREATE SCHEMA IF NOT EXISTS PUBLIC'
+#    username: sa
+#    driver-class-name: org.h2.Driver
+#    dialect: H2
+#    schema-generate: CREATE
+#    hikari:
+#      maximum-pool-size: 5
+
+logging:
+  level:
+    com.xminj.monitor: DEBUG
+    io.micronaut.data: DEBUG
